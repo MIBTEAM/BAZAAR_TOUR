@@ -18,11 +18,11 @@
 {
     width: 100%;
 }
-.swiper .swiper-button-next, .swiper .swiper-button-prev
+/* .swiper .swiper-button-next, .swiper .swiper-button-prev
 {
     color: rgb(237, 209, 143);
     opacity: 2.5;
-}
+} */
 .swiper .swiper-pagination-bullet-active
 {
     background-color:rgb(237, 209, 143);
