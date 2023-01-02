@@ -1,13 +1,8 @@
-*
+.container-slider
 {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-}
-.container
-{
-    width: 1200px;
-    height: 418px;
+    /* width: 1300px; */
+    width: 90%;
+    /* height: 418px; */
     margin: auto;
     display: flex;
     align-items: center;
@@ -25,9 +20,10 @@
 }
 .swiper .swiper-button-next, .swiper .swiper-button-prev
 {
-    color: rgb(243, 189, 104);
+    color: rgb(237, 209, 143);
+    opacity: 2.5;
 }
 .swiper .swiper-pagination-bullet-active
 {
-    background-color: rgb(243, 189, 104);
+    background-color:rgb(237, 209, 143);
 }
