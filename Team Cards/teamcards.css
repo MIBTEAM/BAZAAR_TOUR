@@ -1,0 +1,104 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+.team-cards-container h1
+{
+    text-align: center;
+    padding: 25px 0px;
+    font-size:40px;
+}
+
+.cards-container
+{
+    width:1500px;
+    margin:auto;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-around;
+}
+
+.cards-container .cards-items
+{
+    flex-basis: 25%;
+    margin: 20px 0px;
+    background-color: white;
+    padding: 15px 40px 20px 40px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 2px #888888;
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.cards-container .cards-items:hover
+{
+    transform: scale(0.9, 0.9);
+}
+
+.cards-container .cards-items img
+{
+    border-radius: 50%;
+    padding:10px 0px; 
+    width: 200px;
+    height: 200px;
+}
+
+.cards-container .cards-items p
+{
+    text-align: justify;
+    margin-bottom: 25px;
+}
+
+.cards-container .cards-items figcaption
+{
+    margin-top:10px;
+    font-size: 21px;
+    color:gray;
+}
+
+.cards-container .cards-items h2
+{
+    padding: 18px 0px;
+}
+
+.cards-container .cards-items .icons img
+{
+    margin-right: 25px;
+    width:40px;
+    height:40px;
+    transition: transform 0.2s;
+}
+
+.cards-container .cards-items .icons img:hover
+{
+    transform: scale(1.5);
+}
+
+@media only screen and (max-width: 576px)
+{
+    .cards-container
+    {
+        width:100%;
+        flex-direction: column;
+    }
+
+    .cards-container .cards-items
+    {
+        margin:20px 30px;
+    }
+
+}
+
+@media only screen and (min-width: 576px) and (max-width:768px)
+{
+    .cards-container
+    {
+        width:100%;
+    }
+
+    .cards-container .cards-items
+    {
+        flex-basis: 35%;
+    }
+}
