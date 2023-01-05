@@ -1,0 +1,76 @@
+*{
+    margin:0px;
+    padding: 0px;
+    font-family: sans-serif;
+    font-size: large;
+}
+h1{
+    text-align: center;
+    padding: 25px 0px;
+    font-size: xx-large;
+}
+
+.product-board{
+    width:80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-size: cover;
+}
+
+.card{
+    flex-basis: 19%;
+    margin: 10px 0px;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow:0px 0px 10px lightslategray;
+}
+
+.card:hover{
+    background-color: rgb(228, 252, 245);
+    box-shadow:0px 0px 20px orange;
+}
+
+.card:hover button{
+    background-color: red;
+    color: aliceblue;
+}
+
+.card img{
+    width:100%;
+    border: 2px;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+
+}
+
+.card p{
+    padding: 15px 20px;
+}
+
+.card button{
+    border: none;
+    background-color: brown;
+    color: blanchedalmond;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 5px;
+}
+
+.card button:hover{
+    border: black;
+    background-color: brown;
+    color: blanchedalmond;
+}
+
+@media only screen and (min-width: 200px) and (max-width: 767px){
+    .product-board{
+        width: 100%;
+        flex-direction: column;
+    }
+    .card{
+        margin: 10%;
+    }
+}

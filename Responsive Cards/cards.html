@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cards</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link  href="images/favicon.ico" >
+</head>
+
+<body>
+    <script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "8c9d2489-dca3-454c-b44c-961f303e96ff", // The ID of this integration.
+    region: "au-syd", // The region your integration is hosted in.
+    serviceInstanceID: "8c45b46e-ee77-4edd-a573-8d1a1284be37", // The ID of your service instance.
+    onLoad: function(instance) { instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+    <h1>Responsive Product Cards</h1>
+    <div class="product-board">
+        <div class="card">
+            <img src="images/1.jpg">
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+            <p>Rs. 1500</p>
+            <button>Read More</button>
+        </div>
+        <div class="card">
+            <img src="images/3.jpg">
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+            <p>Rs. 1500</p>
+            <button>Read More</button>
+        </div>
+        <div class="card">
+            <img src="images/4.jpg">
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+            <p>Rs. 1500</p>
+            <button>Read More</button>
+        </div>
+        <div class="card">
+            <img src="images/5.jpg">
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+            <p>Rs. 1500</p>
+            <button>Read More</button>
+        </div>
+        <div class="card">
+            <img src="images/6.jpg">
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+            <p>Rs. 1500</p>
+            <button>Read More</button>
+        </div>
+        <div class="card">
+            <img src="images/7.jpg">
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+            <p>Rs. 1500</p>
+            <button>Read More</button>
+        </div>
+        <div class="card">
+            <img src="images/8.jpg">
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+            <p>Rs. 1500</p>
+            <button>Read More</button>
+        </div>
+        <div class="card">
+            <img src="images/9.png">
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+            <p>Rs. 1500</p>
+            <button>Read More</button>
+        </div>
+        <div class="card">
+            <img src="images/10.jpg">
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+            <p>Rs. 1500</p>
+            <button>Read More</button>
+        </div>
+        <div class="card">
+            <img src="images/11.png">
+            <p>Lorem ipsum dolor sit amet consectetur</p>
+            <p>Rs. 1500</p>
+            <button>Read More</button>
+        </div>
+    </div>
+</body>
+
+</html>
