@@ -1,0 +1,10 @@
+main{
+    width: 100%;
+    margin: 20%;
+    display: flex;
+}
+
+.slide{
+    box-sizing: 20%;
+    width: 20%;
+}
