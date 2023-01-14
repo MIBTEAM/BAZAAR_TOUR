@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+<!--Title-->
+{% block title %}BazaarTour-Home{% endblock %}
+
+<!--body-->
+{% block body%}
+
+ <!-- Slider Begin-->
+ <section>
+    <div class="container mt-3">
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="{{ url_for('static', filename='slider_images/sliderimg1.jpg')}}" alt=""></div>
+                <div class="swiper-slide"><img src="{{ url_for('static', filename='slider_images/sliderimg2.jpg')}}" alt=""></div>
+                <div class="swiper-slide"><img src="{{ url_for('static', filename='slider_images/sliderimg3.jpg')}}" alt=""></div>
+                <div class="swiper-slide"><img src="{{ url_for('static', filename='slider_images/sliderimg4.jpg')}}" alt=""></div>
+                <div class="swiper-slide"><img src="{{ url_for('static', filename='slider_images/sliderimg5.jpg')}}" alt=""></div>
+                <div class="swiper-slide"><img src="{{ url_for('static', filename='slider_images/sliderimg6.jpg')}}" alt=""></div> 
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+<!-- End Slider -->
+
+
+  <!-- Flash Sales Begin-->
+  <section id="flashSale">
+    <div class="endingTime">
+        <div style="font-weight: 600;padding-bottom: 10px;">
+            Sale Ending in
+        </div>
+        <div class="boxes">
+            <div class="box">
+                <p id="days"></p>
+                <p class="opacity">days</p>
+            </div>
+            <div class="box">
+                <p id="hours"></p>
+                <p class="opacity">hrs</p>
+            </div>
+            <div class="box">
+                <p id="minutes"></p>
+                <p class="opacity">mins</p>
+            </div>
+            <div class="box">
+                <p id="seconds"></p>
+                <p class="opacity">secs</p>
+            </div>
+        </div>
+    </div>
+    <div class="cards">
+        <div class="flashCard">
+            <div class="div">
+                <p class="off">30% OFF</p>
+                <img class="img" src="{{ url_for('static', filename='flash_sales_images/img2.jpg')}}" alt="">
+                <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore impedit
+                    adipisci quos aliquam provident temporibus ipsum, aliquid harum vero delectus, placeat quasi
+                </div>
+                <div class="price">
+                    <div class="original">
+                        Rs. 100
+                    </div>
+                    <div class="discount">
+                        Rs. 50
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flashCard">
+            <div class="div">
+                <p class="off">30% OFF</p>
+                <img class="img" src="{{ url_for('static', filename='flash_sales_images/img3.jpg')}}" alt="">
+                <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore impedit
+                    adipisci quos aliquam provident temporibus ipsum, aliquid harum vero delectus, placeat quasi
+                </div>
+                <div class="price">
+                    <div class="original">
+                        Rs. 100
+                    </div>
+                    <div class="discount">
+                        Rs. 50
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flashCard">
+            <div class="div">
+                <p class="off">30% OFF</p>
+                <img class="img" src="{{ url_for('static', filename='flash_sales_images/img4.jpg')}}" alt="">
+                <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore impedit
+                    adipisci quos aliquam provident temporibus ipsum, aliquid harum vero delectus, placeat quasi
+                </div>
+                <div class="price">
+                    <div class="original">
+                        Rs. 100
+                    </div>
+                    <div class="discount">
+                        Rs. 50
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flashCard">
+            <div class="div">
+                <p class="off">30% OFF</p>
+                <img class="img" src="{{ url_for('static', filename='flash_sales_images/img5.jpg')}}" alt="">
+                <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore impedit
+                    adipisci quos aliquam provident temporibus ipsum, aliquid harum vero delectus, placeat quasi
+                </div>
+                <div class="price">
+                    <div class="original">
+                        Rs. 100
+                    </div>
+                    <div class="discount">
+                        Rs. 50
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="flashCard">
+            <div class="div">
+                <p class="off">30% OFF</p>
+                <img class="img" src="{{ url_for('static', filename='flash_sales_images/img6.jpg')}}" alt="">
+                <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore impedit
+                    adipisci quos aliquam provident temporibus ipsum, aliquid harum vero delectus, placeat quasi
+                </div>
+                <div class="price">
+                    <div class="original">
+                        Rs. 100
+                    </div>
+                    <div class="discount">
+                        Rs. 50
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="showAll">
+        <a href="#" target="_blank">See More</a>
+    </div>
+</section>
+<!-- Flash Sales End-->
+
+
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/63b663d147425128790bbe03/1gm07brmv';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+</script>
+    <!--End of Tawk.to Script-->
+
+{% endblock %}
+
+
+
+
+
+
