@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CC.css">
+    <title>Customer Care</title>
+</head>
+
+<body>
+    <h1><center>We are Customer-friendly!</center></h1>
+    <p >
+        It is our core value to take care of our customers by all means. We love to listen you. Our AI (Artificial Intelligence) assisted chatbot, Jasmine, is available 24/7 to answer basic user queries in a human-friendly way. We are continuously making it better to handle maximum customer queries. In case Jasmine is unable to reply your queries, it will let you transfer to Live Chat with our Customer Care Team.
+        The timings of Customer Care Team are listed in the Contact Us page. <br>
+
+        We don't want that any of our site visitor feel bad experience with us just because of poor accessibility. 
+        That's why we have tried our best to make our site accessible by diversity of people by following international best practices. 
+        We have implemented the guidelines of W3C (World Wide Web Consortium) WCAG (Web Content Accessibility Guidelines) V2.1 level-AAA in 
+        the design & development of this site. To know more about our accessibility best practices please visit Accessibility. 
+
+    </p>
+    
+    <a href="https://www.w3.org/WAI/WCAG2AAA-Conformance"
+   title="Explanation of WCAG 2 Level AAA conformance">
+  <img height="32" width="88"
+       src="https://www.w3.org/WAI/WCAG21/wcag2.1AAA-v"
+       alt="Level AAA conformance,
+            W3C WAI Web Content Accessibility Guidelines 2.1">
+</a>
+
+<script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "1eca8513-3bf7-475e-9d6e-a71a4f29b435", // The ID of this integration.
+    region: "au-syd", // The region your integration is hosted in.
+    serviceInstanceID: "8c45b46e-ee77-4edd-a573-8d1a1284be37", // The ID of your service instance.
+    onLoad: function(instance) { instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+</body>
+</html>
