@@ -32,6 +32,8 @@
                 font-family: Aller;
             }
         </style>
+        {% block links %}
+        {% endblock %}
     </head>
     <body>
 
@@ -59,10 +61,10 @@
                                 <a class="nav-link" href="#" style="color:white;text-shadow:2px 2px 5px orange;font-size: 18px;">Contact Us</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#" style="color:white;text-shadow:2px 2px 5px orange;font-size: 18px;">Link 3</a>
+                                    <a class="nav-link" href="{{url_for('seller_login_page')}}" style="color:white;text-shadow:2px 2px 5px orange;font-size: 18px;">Sell with us</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#" style="color:white;text-shadow:2px 2px 5px orange;font-size: 18px;">Link 5</a>
+                                    <a class="nav-link" href="#" style="color:white;text-shadow:2px 2px 5px orange;font-size: 18px;">Our Team</a>
                                 </li>
                             </ul>
                         </div>
@@ -144,10 +146,10 @@
                                 <a class="nav-link" href="#" style="color:white;text-shadow:2px 2px 5px orange;margin-left: 15px;">Contact Us</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#" style="color:white;text-shadow:2px 2px 5px orange;margin-left: 15px;">Link 3</a>
+                                    <a class="nav-link" href="#" style="color:white;text-shadow:2px 2px 5px orange;margin-left: 15px;">Sell with us</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#" style="color:white;text-shadow:2px 2px 5px orange; margin-left: 15px;">Link 5</a>
+                                    <a class="nav-link" href="#" style="color:white;text-shadow:2px 2px 5px orange; margin-left: 15px;">Our Team</a>
                                 </li>
                             </ul>
                             <div class ="d-flex justify-content-end icon-container1">
