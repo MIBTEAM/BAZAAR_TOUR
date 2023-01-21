@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+<!--Title-->
+{% block title %}BazaarTour-Home{% endblock %}
+
+{%block links%}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+<link rel="stylesheet" href="{{ url_for('static', filename='slider/css/slider.css') }}" />
+{%endblock%}
+
+<!--body-->
+{% block body%}
+
+<!-- Slider Begin-->
+<section>
+    <div class="container mt-3">
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide"><img src="{{ url_for('static', filename='slider/images/sliderimg1.jpg')}}"
+                        alt=""></div>
+                <div class="swiper-slide"><img src="{{ url_for('static', filename='slider/images/sliderimg2.jpg')}}"
+                        alt=""></div>
+                <div class="swiper-slide"><img src="{{ url_for('static', filename='slider/images/sliderimg3.jpg')}}"
+                        alt=""></div>
+                <div class="swiper-slide"><img src="{{ url_for('static', filename='slider/images/sliderimg4.jpg')}}"
+                        alt=""></div>
+                <div class="swiper-slide"><img src="{{ url_for('static', filename='slider/images/sliderimg5.jpg')}}"
+                        alt=""></div>
+                <div class="swiper-slide"><img src="{{ url_for('static', filename='slider/images/sliderimg6.jpg')}}"
+                        alt=""></div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+<!-- End Slider -->
+
+
+<!-- Flash Sales Begin-->
+<section id="flashSale" style="height: 50vh;background-color: beige;">
+    flash sale section will be added here
+</section>
+<!-- Flash Sales End-->
+
+
+
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/63b663d147425128790bbe03/1gm07brmv';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+</script>
+<!--End of Tawk.to Script-->
+
+{% endblock %}

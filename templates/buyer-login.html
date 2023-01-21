@@ -1,0 +1,218 @@
+{% extends "base.html" %}
+<!--Title-->
+{% block title %}
+    BazaarTour-Login
+{% endblock %}
+
+{% block links %}
+<script src="https://use.fontawesome.com/e1520c6e83.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+{% endblock %}
+
+{% block body%}
+<section>
+<div class=" container-fluid pt-4 pb-4">
+    <div class="container shadow col-xl-3 col-md-4 col-sm-7" style=" border-radius: 12px; padding:25px ;" >
+        <!-- LOGO-->
+        <div style=" text-align: center;" class="pt-4">
+            <img src="{{ url_for('static', filename='login_images/logo.png')}}"   style="height: 100px;width: 100%;">
+        </div>
+         <!-- form Data-->
+        <form action="/buyer-login" method="POST" class="pt-4"> 
+           <div class="form-outline mb-4">
+                <label class="form-label fw-lighter" for="email">Email address</label>
+                <input type="email" id="email" name="email" class="form-control"  required/>
+          </div>
+            <div class="form-outline mb-2">
+                <div class="d-flex justify-content-between">
+                    <label class="form-label fw-lighter" for="password">Password</label>
+                    <label class="form-label fw-lighter" for="password"><a href="" style="text-decoration: none; font-size: 15px;">Forgot Password?</a></label>
+                </div>
+                <div class="d-flex">
+                <input type="password" id="password" name="password" class="form-control" id="id_password"  placeholder="********" minlength="8" required />
+                <i class=" fa fa-eye-slash"  style="margin: auto; margin-left: -30px; cursor: pointer;" id="myInput" onclick="password_show_hide()" ></i>
+                </div>
+                
+          </div>
+          <div class="col-12 mb-3">
+             <div class="form-check">
+                 <input class="form-check-input" type="checkbox" name="rememberme" id="gridCheck">
+                 <div class="d-flex justify-content-between">
+                    <label class="form-check-label fw-lighter" for="gridCheck">Remember me </label>
+                </div>
+            </div>
+          </div>
+          <div  class="col-12">
+                <input type="submit"  class=" btn btn-primary" style="width: 100%;"   name="submit" />
+          </div>
+        </form>
+        <div class="col-12 mt-4 mb-3 pb-3" style="text-align: center;">
+             <p class="text-center fw-lighter" style="font-size: 13px;">Not a member? <a href=""  data-bs-toggle="modal" data-bs-target="#staticBackdrop" style="text-decoration: none;">Register an account</a></p>
+        </div>
+    </div>
+</div>
+</section>
+
+
+<section>
+     <!-- Modal -->
+  <div class=" modal fade" style="margin-top: 85px;" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 fw-bolder " id="exampleModalLabel">Register Buyer</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body overflow-auto">
+            <div class="container" style="height:400px;"> 
+                <form action="/register-buyer" method="POST">
+                    <div class="row">
+                        <div class="col pt-1">
+                            <label class="form-label fw-lighter" for="firstname">First Name </label>
+                          <input type="text" class="form-control" id="firstname" name="firstname" placeholder="firstname" required/>
+                        </div>
+                        <div class="col pt-1">
+                          <label class="form-label fw-lighter" for="lastname">Last Name </label>
+                          <input type="text" class="form-control" id="lastname" name="lastname" placeholder="lastname" onchange="displayBuyerID()" required/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col pt-3">
+                            <label for="buyerid" class="form-label fw-lighter">Buyer ID</label>
+                            <input type="text" class="form-control" placeholder="Buyer ID" name="buyerid" id="buyerid" readonly/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col pt-3">
+                            <label class="form-label fw-lighter" for="email">Email address</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="example@gmail.com" required/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col pt-3">
+                            <label class="form-label fw-lighter" for="email">Password </label>
+                            <div class="d-flex">
+                                <input type="password" id="password1" name="password" class="form-control" placeholder="********" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required/>
+                                <i class=" fa fa-eye-slash"  style="margin: auto; margin-left: -30px; cursor: pointer;" id="myInput1" onclick="password_show_hide1()" ></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col pt-3">
+                            <label class="form-label fw-lighter " for="cnic">CNIC </label>
+                            <input type="text" class="form-control" id="cnic" name="cnic" title="XXXXX-XXXXXXX-X" minlength="15" maxlength="15" placeholder="XXXXX-XXXXXXX-X" onchange="generateCNIC()" required/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col pt-3">
+                            <label for="address" class="form-label fw-lighter">Home Address</label>
+                            <input type="text" class="form-control " id="address" aria-label="Last name" name="homeaddress" placeholder="House no. / building / street ..." required/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col pt-3">
+                            <label class="form-label fw-lighter" for="mobilenumber">Mobile Number </label>
+                            <input type="text" class="form-control" name="mobilenumber" id="mobilenumber"  minlength="12" maxlength="12" title="03XX-XXXXXXX"  placeholder="03XX-XXXXXXX" onchange="generateMobile()" required/>
+                        </div>
+                    </div>
+                    <div class="row"> 
+                        <div class="col pt-4  pb-4 text-end">
+                            <input type="submit" class="btn btn-primary w-50" name="Register" value="Register">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+    function password_show_hide() {
+        var x = document.getElementById("password");
+        if(x.type === 'password')
+        {
+            x.type='text';
+            document.getElementById("myInput").classList.remove("fa-eye-slash");
+            document.getElementById("myInput").classList.add("fa-eye");
+        }
+        else
+        {
+            x.type='password';
+            document.getElementById("myInput").classList.remove("fa-eye");
+            document.getElementById("myInput").classList.add("fa-eye-slash");
+        }
+    }
+
+    function password_show_hide1() {
+        var x = document.getElementById("password1");
+        if(x.type === 'password')
+        {
+            x.type='text';
+            document.getElementById("myInput1").classList.remove("fa-eye-slash");
+            document.getElementById("myInput1").classList.add("fa-eye");
+        }
+        else
+        {
+            x.type='password';
+            document.getElementById("myInput1").classList.remove("fa-eye");
+            document.getElementById("myInput1").classList.add("fa-eye-slash");
+        }
+   }
+
+  function generateMobile(){
+      var mobile=document.getElementById("mobilenumber").value;
+      if(document.getElementById("mobilenumber").value === "")
+      {
+        document.getElementById("mobilenumber").value="";
+      }
+      else
+      {
+        if(mobile.slice(4, 5) === "-")
+        {}
+        else
+        {
+          var newmobile="" ; 
+          newmobile= newmobile +mobile.slice(0, 4);
+          newmobile=newmobile+"-"; 
+          newmobile= newmobile +mobile.slice(4, 12);
+          document.getElementById("mobilenumber").value=newmobile;
+        }
+      }
+    }
+    function generateCNIC(){
+       var cnic= document.getElementById("cnic").value;
+       if(document.getElementById("cnic").value === ""){}
+       else
+       { 
+        if(cnic.slice(5,6) === "-" && cnic.slice(13,14) ==="-" )
+        {}
+        else{
+            var newcnic="";
+            newcnic = newcnic + cnic.slice(0, 5);
+            newcnic=newcnic+"-";
+            newcnic =  newcnic + cnic.slice(5, 12);
+            newcnic=newcnic+"-"
+            newcnic =  newcnic + cnic.slice(12, 13);
+            document.getElementById("cnic").value=newcnic;
+        }
+       }
+    }
+
+    var count=0;
+    function displayBuyerID()
+    {
+        if(count == 0)
+        {
+            /*  creating unique userid = day month year hours minutes */
+            var currentdate = new Date();
+            var datetime ="BTB"+currentdate.getDay()+ currentdate.getMonth() + currentdate.getFullYear()+ currentdate.getHours()
+            + currentdate.getMinutes() +currentdate.getSeconds()+currentdate.getMilliseconds();
+            document.getElementById('buyerid').value=datetime;
+            count++;
+        }
+
+    }
+</script>
+{% endblock %}
