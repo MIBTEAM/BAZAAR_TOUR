@@ -1,0 +1,104 @@
+<header class="fixed-top header" id="desktop-size-view"
+    style="background-color: white; box-shadow: 2px 2px 2px 2px lightgrey;">
+    <div class="navbar navbar-expand-sm d-flex align-items-center  header mx-5">
+        <div class="logo">
+            <a href="/"><img src="../static/header_images/logo.png" alt=""></a>
+        </div>
+
+        <div class="header-links d-flex justify-content-center align-items-center">
+            <a href="/">Home</a>
+            <a href="/contact_us">Contact Us</a>
+            <a href="/register-seller">Sell with Us</a>
+            <a href="/about_us">About Us</a>
+            <div class="dropdown catagories-links">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                    data-toggle="dropdown">Categories</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Link 1</a></li>
+                    <li><a class="dropdown-item" href="#">Link 2</a></li>
+                    <li><a class="dropdown-item" href="#">Link 3</a></li>
+                </ul>
+            </div>
+
+        </div>
+        <div class="header-images d-flex justify-content-end align-items-center container list-inline">
+            <input type="text" name="search" placeholder="Search...">
+            <a href="#"><img src="../static/header_images/search.png.png" alt="search-icon"></a>
+            <a class="dropdown" href="#">
+                <img class="dropdown-toggle" data-target="#wishlist" data-toggle="collapse"
+                    src="../static/header_images/heart.png.png" alt="wishlist"></a>
+
+            <div class="dropdown-menu" id="wishlist" style="margin-left: 70%;">
+                {% include 'partials/wishlist.html' %}
+            </div>
+            <a href="#"><img src="../static/header_images/cart.png.png" alt="cart"></a>
+            <a href="#"><img id="profile-icon" src="../static/header_images/user.png" alt="profile"></a>
+        </div>
+    </div>
+
+</header>
+
+
+<!-- mobile-size-view -->
+<header class="fixed-top" id="mobile-size-view" style="background-color: white; box-shadow: 2px 2px 2px 2px lightgrey;">
+
+    <div class="navbar navbar-expand-lg d-flex align-items-center header-mobile-view">
+        <div class="logo">
+            <a href="#"><img src="../static/header_images/logo.png" alt=""></a>
+        </div>
+        <input type="text" name="search" placeholder="Search...">
+        <div class="mx-3"></div>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse icon" id="navbarContent">
+            <ul class="navbar-nav">
+                <div class="header-links">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact_us">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/register-seller">Sell With Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about_us">About Us</a>
+                    </li>
+                </div>
+
+                <li class="nav-item dropdown">
+                    <div class="d-flex catagories-links">
+                        <div>
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown">Categories</a>
+                            <ul class="dropdown-menu" style="position:absolute;">
+                                <li><a class="dropdown-item" href="#">Electronics</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Sports</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Books</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+
+            <div class="header-images d-flex justify-content-end align-items-center" style="margin-left:200px;">
+                <a href="#"><img src="../static/header_images/heart.png.png" alt="wishlist"></a>
+                <a href="#"><img src="../static/header_images/cart.png.png" alt="cart"></a>
+                <a href="#"><img id="profile-icon" src="../static/header_images/user.png" alt="profile"></a>
+            </div>
+        </div>
+
+    </div>
+</header>

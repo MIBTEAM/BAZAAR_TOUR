@@ -1,0 +1,89 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+.policy-container
+{
+    height: 110px;
+    margin-left: 100px;
+    margin-right: 100px;
+    display: grid;
+    margin-top: 50px;
+    box-shadow: 1px 1px 1px 1px lightgray;
+}
+
+.policy-container .one
+{
+    background-color: lightyellow;
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 2;
+}
+
+.policy-container .one h1
+{
+    margin-top: 25px;
+    margin-left: 30px;
+    font-weight: bold;
+    font-size: 45px;
+}
+
+.policy-container .two
+{
+    background-color: pink;
+    grid-column: 4;
+    grid-row: 1 / span 2;
+}
+
+.policy-container .three
+{
+    background-color: red;
+    grid-column: 5;
+    grid-row: 1;
+}
+
+.policy-container .four
+{
+    background-color: orange;
+    grid-column: 5;
+    grid-row: 2;
+}
+
+
+@media only screen and (min-width: 360px) and (max-width:768px)
+{
+    .policy-container
+    {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 80px;
+    }
+
+    .policy-container .one
+    {
+        grid-column: 1;
+    }
+
+    .policy-container .two
+    {
+        grid-column: 2;
+    }
+
+    .policy-container .three
+    {
+        grid-column: 3;
+    }
+
+    .policy-container .four
+    {
+        grid-column: 3;
+    }
+
+    .policy-container .one h1
+    {
+        font-size: 20px;
+        margin-top: 25px;
+        margin-left: 20px;
+    }
+}

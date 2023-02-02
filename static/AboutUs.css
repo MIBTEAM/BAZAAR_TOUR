@@ -1,0 +1,97 @@
+.mt-3 {
+    /* border: 2px solid black; */
+    margin-left: 100px;
+    margin-right: 100px;
+    background-color: rgb(237, 237, 237);
+    border-radius: 10px;
+    width: 88%;
+}
+
+.col {
+    background-color: rgb(208, 208, 208);
+    margin: 20px;
+    min-height: 150px;
+    height: auto !important;
+    border-radius: 10px;
+
+    /* border: 2px solid red; */
+}
+
+.brief {
+    /* height: 50%; */
+    padding-left: 30px;
+    padding-top: 10px;
+    overflow: hidden;
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+    /* border: 1px solid black; */
+}
+
+.explaination-page {
+    display: block;
+    text-align: end;
+    /* margin: 15px; */
+    padding-right: 10px;
+    /* margin-bottom: -10px; */
+}
+
+.learn-more {
+    text-decoration: none;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+p
+{
+    overflow: hidden;    margin-bottom: 25px !important;
+}
+h3 {
+    font-weight: bold;
+    margin: 15px;
+}
+
+@media only screen and (200px >=width < 767px) {
+    .container-fluid mt-3 {
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (767px=width <=983) {
+    .container-fluid mt-3 {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .col p-2 {
+        width: 100%
+    }
+}
+
+#payment-details {
+    /* border: 2px solid red; */
+    margin-left: 35px;
+    margin-right: 35px;
+    padding: 15px;
+    background-color: #c9c9c9;
+}
+
+#courier-details {
+    margin-top: 10px;
+    /* border: 2px solid red; */
+    margin-left: 35px;
+    margin-right: 35px;
+    padding: 15px;
+    background-color: #c9c9c9;
+}
+
+.col:hover {
+    cursor: pointer;
+    background-color: #b8d8e0;
+}

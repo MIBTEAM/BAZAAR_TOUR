@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!--Header CSS Link-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='header_css/header_css.css')}}">
+
+    <!--Footer Css Link-->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='footer_css/style.css')}}">
+    <link rel="stylesheet" href="../../../static/customerCare.css">
+    <title>Customer Care</title>
+</head>
+
+<body>
+    {% include 'partials/navbar.html' %}
+    <section class="slider" style="margin-top:70px;">
+        <div class="row small">
+            <div class="imagegroup" style="animation-delay: 1s;">
+                <a href="https://www.tcsexpress.com/" target="_blank">
+                    <img src="../../../static/customer_care_images/1.png" style="width:300px; height:100px">
+                </a>
+                <a href="https://stripe.com/" target="_blank">
+                    <img src="../../../static/customer_care_images/2.png" style="width:300px; height:100px">
+                </a>
+                <a href="https://www.tawk.to/" target="_blank">
+                    <img src="../../../static/customer_care_images/3.png" style="width:300px; height:100px">
+                </a>
+                <a href="">
+                    <img src="../../../static/customer_care_images/4.png" style="width:300px;height:100px">
+                </a>
+                <a href="https://www.ibm.com/watson" target="_blank">
+                    <img src="../../../static/customer_care_images/5.png" style="width:300px;height: 100px;">
+                </a>
+                <a href="https://www.ibm.com/watson" target="_blank">
+                    <img src="../../../static/customer_care_images/6.png" style="width:300px;height: 100px;">
+                </a>
+                <a href="https://www.ibm.com/watson" target="_blank">
+                    <img src="../../../static/customer_care_images/7.png" style="width:300px;height: 100px;">
+                </a>
+                <a href="https://www.ibm.com/watson" target="_blank">
+                    <img src="../../../static/customer_care_images/8.png" style="width:300px;height: 100px;">
+                </a>
+            </div>
+        </div>
+    </section>
+    <div class="policy-container">
+        <div class="one">
+            <h1>Customer Care ❤</h1>
+        </div>
+        <div class="two"></div>
+        <div class="three"></div>
+        <div class="four"></div>
+    </div>
+
+    <section class="content">
+        <h2>Motive:</h2>
+        <p>It is very important for us, human beings, to discuss our issues to someone
+            we trust so that we can resolve them.
+            As a human being, we don't like to get ignored when we talk.
+            We at <b>BazaarTour,</b> respect the voice of our users. We love to listen you.
+            We want to here you. We like to discuss your issues with you and resolving them.
+        </p>
+        <h3>Please don't hesitate to contact us!</h3>
+        <h2>Goal:</h2>
+        <p>Our goal is to provide you very friendly services 24/7 with many ways.
+            <br>
+            We are providing customer care services via:
+        </p>
+        <ol>
+            <li>Chatbot</li>
+            <li>Live Chat</li>
+            <li>Professional UI/UX Design</li>
+            <li>Feedback forms</li>
+            <li>User satisfaction forms</li>
+            <li>SEO/SEM</li>
+            <li>Accessibility</li>
+        </ol>
+        <h3>1. Chatbot</h3>
+        <p>We have partnered with <b>IBM Watson Assistant</b> to build a Chatbot for you. Our Chatbot, nah nah, Jasmine!
+        </p>
+        <p>
+            <b><i>Jasmine</i></b> is an AI (Artificial Intelligence) based chatbot, available for you 24/7.
+            It's capable of answering basic to moderate level customer queries in a user-friendly way.
+            In case, Jasmine is unable to understand you.
+            You don't need to take any worries!
+        </p>
+        <h4>You've Live Chat option available! 😌</h4>
+        <h3>2. Live Chat</h3>
+        <p>
+            This feature enables you to chat with our live customer care team.
+            Our customers care team is a team of professionals who are well-versed to understand
+            your emotions, your problems and issues. Our CC team are team of humans like us!
+            That's why, they cannot offer their purified services for 24/7.
+            But they are very easily available during following timeslots!
+        </p>
+        <h3>Customer Care Team (availability slots)</h3>
+        <h4>Summer:</h4>
+        <ul>
+            <li>Monday-Thursday: <b>7:00am-6:00pm</b> </li>
+            <li>Friday: <b>8:00am-12:00am</b> & <b>3:00pm-6:00pm</b></li>
+            <li>Saturday-Sunday: <b>off</b></li>
+        </ul>
+        <h4>Winter:</h4>
+        <ul>
+            <li>Monday-Thursday: <b>8:00am-4:00pm</b> </li>
+            <li>Friday-Sunday: <b>off</b></li>
+        </ul>
+        <h3>Hey 👋</h3>
+        <em>
+            We are planning to launch our <i><b>WhatsApp Live Chat</b></i> option for holidays!
+            WhatsApp conversation will be easy for you and for your CC team!!!
+        </em>
+        😊
+        <h3>3. Professional UI/UX Design</h3>
+        <p>
+            We have tried our best to give you very relax and predictable user
+            experience with best combination of coloring schemes.
+            While building the Design of this platform,
+            we have considered <b><i>Universal Design Principles</i></b> which include:
+        </p>
+        <ol>
+            <li>Equitable Use</li>
+            <li>Flexibility in Use</li>
+            <li>Simple and Intuitive Use</li>
+            <li>Perceptive Information</li>
+            <li>Tolerance for Error</li>
+            <li>Low physical effort</li>
+            <li>Size and Space for Approach and Use</li>
+        </ol>
+        <p>
+            If you have any suggestions regarding the improvement of the system's
+            design or coloring recommendations,
+            we are obliged to consider them, because this is for you!
+        </p>
+        <h3>4. Feedback Forms</h3>
+        <p>
+            If you have any suggestions regarding anything,
+            your shopping experience, your selling experience,
+            your payment related complaints, just fill out this form.
+            We'll catch them soon!!
+        </p>
+
+        <h3>5. User Satisfaction forms:</h3>
+        <p>
+            At BazaarTour, we send a satisfaction form on monthly basis to everyone
+            associated with our system. To know about their satisfaction with our
+            services. Please, don't miss them. Your responses will help us build
+            and improve our system. Ultimately, you'll be the one who get benefited!!!
+        </p>
+        <h3>6. SEO/SEM</h3>
+        <p>
+            Although these are some technical terms. But we want to let you know that what are they
+            and how they are contributing to your experience.
+            SEO is the acronym of Search Engine Optimization.
+            It's a great tool to rank sites higher than other sites while you search on browser.
+            We've implemented SEO for your ease. So that, whenever you try to visit our site
+            or recommend someone to visit us, they don't get misled by many other similar businesses.
+            SEM (Search Engine Marketing), you can say it is like targeting marketing.
+            But believe us, SEM will help you a lot to find out
+            the relevant products according to your desires!
+            That's what you want to do! 👉🏻
+        </p>
+        <h3>7. Accessibility</h3>
+        <p>
+            <i>
+                "Over one billion people in the world have disability, 1 billion.
+                That's more than the population of United States, Canada,
+                France, Itlay, Japan, Mexico, and Brazil combined."
+            </i>
+            <br>
+            <i><b>~says Google</b></i>
+        </p>
+        <p>
+            It is our moral duty to build systems in such a way that a
+            wide range of people with multiple spectrum of abilities can
+            get maximum benefits. That's why, we have implemented the
+            professional guidelines of <b>W3C</b>. Our system is conformanced with <b>WCAG-2.1</b> and <b>WAI-AA.</b>
+        </p>
+        <a href="https://www.w3.org/WAI/WCAG2AA-Conformance" title="Explanation of WCAG 2 Level AA conformance">
+            <img height="32" width="88" src="https://www.w3.org/WAI/WCAG21/wcag2.1AA-v" alt="Level AA conformance,
+                 W3C WAI Web Content Accessibility Guidelines 2.1">
+        </a>
+        <h4>Now, you can access BazaarTour with your Assistive Technologies. Cool ha Naa! 😌</h4>
+
+    </section>
+
+    {% include 'partials/footer.html' %}
+
+    <script>
+        window.watsonAssistantChatOptions = {
+            integrationID: "1eca8513-3bf7-475e-9d6e-a71a4f29b435", // The ID of this integration.
+            region: "au-syd", // The region your integration is hosted in.
+            serviceInstanceID: "8c45b46e-ee77-4edd-a573-8d1a1284be37", // The ID of your service instance.
+            onLoad: function (instance) { instance.render(); }
+        };
+        setTimeout(function () {
+            const t = document.createElement('script');
+            t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+            document.head.appendChild(t);
+        });
+    </script>
+
+</body>
+
+</html>

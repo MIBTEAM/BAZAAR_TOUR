@@ -1,13 +1,17 @@
-
 .heading {
     font-size: 20px;
     font-weight: 500;
     line-height: 24px;
 }
 
+footer
+{
+    margin-top: 10px;
+    border-top: 1px solid black ;
+}
 footer a {
     text-decoration: none;
-    color: whitesmoke;
+    color: rgb(0, 0, 0);
 }
 
 footer a:hover {
@@ -36,11 +40,11 @@ footer ul {
 }
 
 #copyright {
-    background-color: #232F3E;
+    background-color: #ffffff;
     opacity: 0.95;
-    color: rgb(212, 209, 209);
+    color: rgb(54, 26, 26);
     text-align: center;
-    padding-top: 7px;
+    /* padding-top: 7px; */
     padding-bottom: 16px;
 }
 
@@ -52,10 +56,10 @@ footer ul {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    background-color: #232F3E;
+    background-color: #ffffff;
     opacity: 0.95;
     padding: 1.5%;
-    color: #F5F5F5;
+    color: #000000;
 }
 
 .follow {
