@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/png" href="/static/header_images/title.png">
     <title>{% block title %}BazaarTour{% endblock %}</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -31,6 +31,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+    <!-- catcards css -->
+    <link rel="stylesheet" href="../static/CatCards.css">
+
     <!--Slider Link-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="{{ url_for('static', filename='slider_css/slider.css') }}" />
@@ -40,36 +43,12 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='header_css/header_css.css')}}">
     <!--Footer Css Link-->
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='footer_css/style.css')}}">
-    <style>
-        @font-face {
-            font-family: Aller;
-            src: url("{{ url_for('static', filename='font/Aller_Rg.ttf')}}");
-        }
+    
+    <!-- landing-page-card css -->
+    <link rel="stylesheet" type="text/css" href="../static/landing-page-card-css.css">
 
-        @font-face {
-            font-family: Aller;
-            font-weight: bold;
-            src: url("{{ url_for('static', filename='font/Aller_Bd.ttf')}}");
-        }
 
-        @font-face {
-            font-family: Aller;
-            font-style: italic;
-            src: url("{{ url_for('static', filename='font/Aller_It.ttf')}}");
-        }
 
-        @font-face {
-            font-family: Aller;
-            font-weight: lighter;
-            src: url("{{ url_for('static', filename='font/Aller_LtIt.ttf')}}");
-        }
-
-        body,
-        title,
-        section {
-            font-family: Aller;
-        }
-    </style>
     <!-- {% block links %}
     {% endblock %} -->
 </head>

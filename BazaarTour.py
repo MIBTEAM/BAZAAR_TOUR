@@ -18,8 +18,6 @@ def buyer_login_page():
         return render_template("buyer-login.html")
 
 
-
-
 @app.route("/contact_us")
 def Contact_us():
     return render_template("About_us_and_policies/contact.html")
@@ -55,11 +53,9 @@ def Customer_Care():
 def FAQs():
     return render_template("faq.html")
 
-
 @app.route("/buyer_dashboard")
 def Buyer_Dashboard():
-    return render_template("Buyer_Dashboard.html")
-
+    return render_template("buyer_dashboard.html")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=True,port=9999)

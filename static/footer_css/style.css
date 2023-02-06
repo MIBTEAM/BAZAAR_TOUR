@@ -7,7 +7,7 @@
 footer
 {
     margin-top: 10px;
-    border-top: 1px solid black ;
+    /* border-top: 1px solid black ; */
 }
 footer a {
     text-decoration: none;

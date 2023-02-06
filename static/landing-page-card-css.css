@@ -1,0 +1,113 @@
+*{
+    margin:0px;
+    padding: 0px;
+    font-family: system-ui;
+    font-size: large;
+}
+h1{
+    text-align: center;
+    padding: 25px 0px;
+    font-size: xx-large;
+}
+
+.product-board{
+    width:90%;
+    margin: auto;
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-size: cover;
+    background-color: rgb(243, 239, 235);
+}
+
+.card{
+    flex-basis: 19%;
+    margin: 10px 0px;
+    text-align: center;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow:0px 0px 10px lightslategray;
+}
+
+.card:hover{
+    box-shadow:0px 0px 20px rgb(66, 66, 66);
+}
+
+.card img{
+    width:100%;
+    border: 2px;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+
+}
+
+.card p{
+    padding: 15px 20px;
+}
+
+.card button{
+    border: none;
+    background-color: rgb(235, 139, 61);
+    color: blanchedalmond;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 5px;
+}
+
+.card button:hover{
+    border: black;
+    background-color: rgb(248, 182, 182);
+    color: blanchedalmond;
+    transition: 0.3s ease;
+}
+
+.cardButtons{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    padding-left: 20px;
+    justify-content: space-around;
+}
+.btnOne{
+    width: 70%;
+}
+.btnTwo{
+    max-width: 100%;
+    width: 60px;
+    height: 60px;
+    padding-left: 10px;
+    padding-right: 30px;
+    object-fit: cover;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 980px)
+{
+    .product-board{
+        width: 80%;
+    }
+    .card{
+        flex-basis: 30%;
+    }
+}
+@media only screen and (min-width: 981px) and (max-width: 1400px)
+{
+    .product-board{
+        width: 80%;
+    }
+    .card{
+        flex-basis: 25%;
+    }
+}
+@media screen and (min-width: 360px) and (max-width: 767px){
+    .product-board{
+        width: 100%;
+        flex-direction: column;
+    }
+    .card{
+        margin: 10%;
+    }
+}
+
+

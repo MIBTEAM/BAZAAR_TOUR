@@ -1,3 +1,4 @@
+
 <header class="fixed-top header" id="desktop-size-view"
     style="background-color: white; box-shadow: 2px 2px 2px 2px lightgrey;">
     <div class="navbar navbar-expand-sm d-flex align-items-center  header mx-5">
@@ -32,12 +33,31 @@
                 {% include 'partials/wishlist.html' %}
             </div>
             <a href="#"><img src="../static/header_images/cart.png.png" alt="cart"></a>
-            <a href="#"><img id="profile-icon" src="../static/header_images/user.png" alt="profile"></a>
+
+
+            <a href="#" class="dropdown">
+                <img class="dropdown-toggle" id="profile-icon" src="../static/header_images/user.png"
+                    data-toggle="collapse" data-target="#profile-dropdown" alt="profile">
+            </a>
+            <ul class="dropdown-menu" id="profile-dropdown" style="margin-left: 90%;">
+                <li><a class="dropdown-item" href="/buyer_dashboard">Dashboard</a></li>
+                <li><a class="dropdown-item" id="logout-btn">Log out</a></li>
+            </ul>
+
+
         </div>
     </div>
 
 </header>
 
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#logout-btn").click(function () {
+            $("#logoutModal").toggle();
+        });
+    });
+</script> -->
 
 <!-- mobile-size-view -->
 <header class="fixed-top" id="mobile-size-view" style="background-color: white; box-shadow: 2px 2px 2px 2px lightgrey;">
