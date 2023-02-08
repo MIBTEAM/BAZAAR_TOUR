@@ -17,7 +17,6 @@ def buyer_login_page():
     else:
         return render_template("buyer-login.html")
 
-
 @app.route("/contact_us")
 def Contact_us():
     return render_template("About_us_and_policies/contact.html")

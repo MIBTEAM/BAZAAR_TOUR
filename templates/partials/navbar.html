@@ -1,3 +1,4 @@
+ 
 
 <header class="fixed-top header" id="desktop-size-view"
     style="background-color: white; box-shadow: 2px 2px 2px 2px lightgrey;">
@@ -32,26 +33,56 @@
             <div class="dropdown-menu" id="wishlist" style="margin-left: 70%;">
                 {% include 'partials/wishlist.html' %}
             </div>
-            <a href="#"><img src="../static/header_images/cart.png.png" alt="cart"></a>
-
+            <a href="#"><img src="../static/header_images/cart.png.png" class="dropdown-toggle" data-target="#cart"
+                    data-toggle="collapse" alt="cart"></a>
+            <div class="dropdown-menu" id="cart" style="margin-left: 70%;">
+                {% include 'partials/cart.html' %}
+            </div>
 
             <a href="#" class="dropdown">
                 <img class="dropdown-toggle" id="profile-icon" src="../static/header_images/user.png"
                     data-toggle="collapse" data-target="#profile-dropdown" alt="profile">
             </a>
             <ul class="dropdown-menu" id="profile-dropdown" style="margin-left: 90%;">
+                <li><a class="dropdown-item" href="#">Login</a></li>
                 <li><a class="dropdown-item" href="/buyer_dashboard">Dashboard</a></li>
-                <li><a class="dropdown-item" id="logout-btn">Log out</a></li>
+                <!-- <li><a class="dropdown-item" id="logout-btn">Log out</a></li> -->
+                <li>
+                    <a class="dropdown-item"  id="logout-btn" href="#" data-toggle="modal" data-target="#logoutModal">
+                        <span>LogOut</span></a>
+                </li>
             </ul>
 
 
         </div>
     </div>
 
+
+
+            <!-- Logout Modal-->
+            <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                        <a class="btn btn-primary" href="/">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 </header>
 
-<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!--<script>
     $(document).ready(function () {
         $("#logout-btn").click(function () {
             $("#logoutModal").toggle();
@@ -122,3 +153,13 @@
 
     </div>
 </header>
+
+
+
+<script>
+    $("#logout-btn").click(function(e){ 
+        setTimeout(function(e){
+            $("div.modal-backdrop").remove()
+        },50)
+    })
+</script>
