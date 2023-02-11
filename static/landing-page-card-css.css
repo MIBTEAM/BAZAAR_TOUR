@@ -29,10 +29,10 @@ h1{
     border-radius: 5px;
     box-shadow:0px 0px 10px lightslategray;
 }
-
+/* 
 .card:hover{
     box-shadow:0px 0px 20px rgb(66, 66, 66);
-}
+} */
 
 .card img{
     width:100%;
@@ -59,7 +59,7 @@ h1{
     border: black;
     background-color: rgb(248, 182, 182);
     color: blanchedalmond;
-    transition: 0.3s ease;
+    transition: 2.3s ease;
 }
 
 .cardButtons{

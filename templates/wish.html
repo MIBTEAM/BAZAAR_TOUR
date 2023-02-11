@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wish_Title</title>
+    <link rel="stylesheet" href="../static/wish_tiles.css">
+    <script
+     src="http://code.jquery.com/jquery-3.3.1.js"
+     integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+     crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="wish_board">
+        <script>
+        var wishData
+        $(document).ready(function(){
+            $.ajax({type:"GET",
+                    url:"/getWishListProducts",
+                    success:function(response){
+                        console.log(response)
+                        var wishData = JSON.parse(response)
+                        console.log(wishData)
+                        for (i in wishData)
+                        {
+                            $('.wish_board').append("<div class = 'wish_tile' id = 'wish_tile_"+[i]+"'><div class='wish_des'> <h3 id='prod_Name"+[i]+"'></h3><p id = 'price"+[i]+"'></p><div class='wish_btns'><button class='wishTwo'><img src=' '></button><button class='wishOne'><img src='urdu novels/cancel.png'></button></div></div><div class='wish_img'><img id='wish_img"+[i]+"' src=' '></div></div>")
+                            document.getElementById('wish_img' + [i]).src = "../static"+ wishData[i].img_path
+                            document.getElementById('prod_Name' + [i]).innerHTML = wishData[i].title
+                            document.getElementById('price' + [i]).innerHTML = wishData[i].price
+                        }
+                        
+                }});  
+        });
+        </script>
+    </div>      
+
+        <!-- <div class="wish_tile" id="wish_tile_">
+            <div class="wish_des">
+                <h3>Product Name</h3>
+                <p>300 Rs.</p>
+                <div class="wish_btns">
+                    <button class="wishTwo"><img src="urdu novels/shopping-cart.png"></button>
+                    <button class="wishOne"><img src="urdu novels/cancel.png"></button>
+                </div>
+            </div>
+            <div class="wish_img">
+                <img src="urdu novels/Book Review_ Peer-e-Kamil.jfif" alt="image of novel">      
+            </div>
+        </div>
+-->
+</body>
+</html>

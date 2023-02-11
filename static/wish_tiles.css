@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui;
+}
+.wish_board{
+    background-color: rgb(243,239,235);
+    margin: 20px;
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* padding-bottom: 30px; */
+    flex-wrap: wrap;
+}
+.wish_tile{
+    width:30%;
+    height: 110px;
+    flex-basis: 40%;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow:0px 0px 10px rgb(165, 166, 166);
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: row;
+    border: 2px solid white;
+}
+.wish_tile:hover{
+    box-shadow:0px 0px 20px rgb(66, 66, 66);
+}
+.wish_des{
+    border-radius: 10px; 
+    padding-top: 10px;
+    margin-left: 30px;
+    width: 80%;
+}
+.wish_des h3{
+    color: black;
+    padding-bottom: 4px;
+}
+
+.wish_btns{
+    padding-top: 5px;
+}
+.wish_btns button{
+    height: 30px;
+    width: 50px;
+    border: none;
+    gap: 40px;
+    border-radius: 3px;
+}
+.wishOne{
+    background-color: rgb(217,83,79);
+}
+.wishTwo{
+    background-color: rgb(51,122,183);
+}
+.wish_btns img{
+    width: 16px;
+    height: 16px;
+}
+
+.wish_img{
+    width: 20%;
+    /* background-color: brown; */
+    margin-right: 30px;
+    border-left: 2px solid white;
+}
+.wish_img img{
+    padding: 10px;
+    height: 90px;
+    width: 90px;
+    aspect-ratio: inherit;
+    /* box-shadow:0px 0px 10px rgb(165, 166, 166); */
+    border-radius: 10px;
+    align-items: center;
+}

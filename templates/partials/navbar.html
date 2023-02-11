@@ -1,16 +1,13 @@
- 
-
 <header class="fixed-top header" id="desktop-size-view"
     style="background-color: white; box-shadow: 2px 2px 2px 2px lightgrey;">
     <div class="navbar navbar-expand-sm d-flex align-items-center  header mx-5">
         <div class="logo">
             <a href="/"><img src="../static/header_images/logo.png" alt=""></a>
         </div>
-
         <div class="header-links d-flex justify-content-center align-items-center">
             <a href="/">Home</a>
             <a href="/contact_us">Contact Us</a>
-            <a href="/register-seller">Sell with Us</a>
+            <a href="/register_seller">Sell with Us</a>
             <a href="/about_us">About Us</a>
             <div class="dropdown catagories-links">
                 <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
@@ -24,8 +21,15 @@
 
         </div>
         <div class="header-images d-flex justify-content-end align-items-center container list-inline">
-            <input type="text" name="search" placeholder="Search...">
-            <a href="#"><img src="../static/header_images/search.png.png" alt="search-icon"></a>
+            <a href="#">
+                <form action="#" >
+                    <input type="text" name="search" placeholder="Search...">
+                    <button id="submit-btn" type="submit"><img src="../static/header_images/search.png.png"
+                        alt="search-icon"></button>
+                </form>
+            </a>
+            <!-- <input type="text" name="search" placeholder="Search...">
+            <a href="#"><img src="../static/header_images/search.png.png" data-target="#search-bar" alt="search-icon"></a> -->
             <a class="dropdown" href="#">
                 <img class="dropdown-toggle" data-target="#wishlist" data-toggle="collapse"
                     src="../static/header_images/heart.png.png" alt="wishlist"></a>
@@ -44,11 +48,11 @@
                     data-toggle="collapse" data-target="#profile-dropdown" alt="profile">
             </a>
             <ul class="dropdown-menu" id="profile-dropdown" style="margin-left: 90%;">
-                <li><a class="dropdown-item" href="#">Login</a></li>
+                <li><a class="dropdown-item" href="">Login</a></li>
+                <li><a class="dropdown-item" href="/register_buyer">Register</a></li>
                 <li><a class="dropdown-item" href="/buyer_dashboard">Dashboard</a></li>
-                <!-- <li><a class="dropdown-item" id="logout-btn">Log out</a></li> -->
                 <li>
-                    <a class="dropdown-item"  id="logout-btn" href="#" data-toggle="modal" data-target="#logoutModal">
+                    <a class="dropdown-item" id="logout-btn" href="#" data-toggle="modal" data-target="#logoutModal">
                         <span>LogOut</span></a>
                 </li>
             </ul>
@@ -59,29 +63,29 @@
 
 
 
-            <!-- Logout Modal-->
-            <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-            aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">×</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                        <a class="btn btn-primary" href="/">Logout</a>
-                    </div>
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="/">Logout</a>
                 </div>
             </div>
         </div>
+    </div>
 
 </header>
 
- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <!--<script>
     $(document).ready(function () {
         $("#logout-btn").click(function () {
@@ -157,9 +161,9 @@
 
 
 <script>
-    $("#logout-btn").click(function(e){ 
-        setTimeout(function(e){
+    $("#logout-btn").click(function (e) {
+        setTimeout(function (e) {
             $("div.modal-backdrop").remove()
-        },50)
+        }, 50)
     })
 </script>

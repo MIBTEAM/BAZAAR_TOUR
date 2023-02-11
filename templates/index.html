@@ -4,6 +4,15 @@
 
 <!--body-->
 {% block body%}
+<style>
+    .preload * {
+        -webkit-transition: none !important;
+        -moz-transition: none !important;
+        -ms-transition: none !important;
+        -o-transition: none !important;
+    }
+</style>
+<!-- <div class="preload"> -->
 
 <!-- Slider Begin-->
 <section>
@@ -33,7 +42,19 @@
 </section>
 <!-- End Slider -->
 
-
+<input type="text" id="prod_id" placeholder="prod_id">
+<button id="testbtn">test</button>
+<script>
+    $(document.body).on('click', '#testbtn', function () {
+        $.ajax({
+            url: 'addToCart/' + document.getElementById('prod_id').value,
+            type: 'POST',
+            success: function (result) {
+                console.log(result)
+            }
+        })
+    })
+</script>
 <!-- Flash Sales Begin-->
 <section id="flashSale">
     <div class="endingTime">
@@ -194,138 +215,40 @@
     <h1>Our Products</h1>
 
     <div class="product-board">
-        <div class="card">
-            <img src="../static/landing-page-card-images/1.jpg">
-            <p>Lorem ipsum dolor sit amet consectetur</p>
-            <p>Rs. 1500</p>
-            <div class="cardButtons">
-                <button class="btnOne">Buy Now</button>
-                <div class="btnTwo">
-                    <a href="#">
-                        <img class="picSize" src="../static/landing-page-card-images/heart.png">
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <img src="../static/landing-page-card-images/3.jpg">
-            <p>Lorem ipsum dolor sit amet consectetur</p>
-            <p>Rs. 1500</p>
-            <div class="cardButtons">
-                <button class="btnOne">Buy Now</button>
-                <div class="btnTwo">
-                    <a href="#">
-                        <img class="picSize" src="../static/landing-page-card-images/heart.png">
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <img src="../static/landing-page-card-images/4.jpg">
-            <p>Lorem ipsum dolor sit amet consectetur</p>
-            <p>Rs. 1500</p>
-            <div class="cardButtons">
-                <button class="btnOne">Buy Now</button>
-                <div class="btnTwo">
-                    <a href="#">
-                        <img class="picSize" src="../static/landing-page-card-images/heart.png">
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <img src="../static/landing-page-card-images/5.jpg">
-            <p>Lorem ipsum dolor sit amet consectetur</p>
-            <p>Rs. 1500</p>
-            <div class="cardButtons">
-                <button class="btnOne">Buy Now</button>
-                <div class="btnTwo">
-                    <a href="#">
-                        <img class="picSize" src="../static/landing-page-card-images/heart.png">
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <img src="../static/landing-page-card-images/6.jpg">
-            <p>Lorem ipsum dolor sit amet consectetur</p>
-            <p>Rs. 1500</p>
-            <div class="cardButtons">
-                <button class="btnOne">Buy Now</button>
-                <div class="btnTwo">
-                    <a href="#">
-                        <img class="picSize" src="../static/landing-page-card-images/heart.png">
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <img src="../static/landing-page-card-images/7.jpg">
-            <p>Lorem ipsum dolor sit amet consectetur</p>
-            <p>Rs. 1500</p>
-            <div class="cardButtons">
-                <button class="btnOne">Buy Now</button>
-                <div class="btnTwo">
-                    <a href="#">
-                        <img class="picSize" src="../static/landing-page-card-images/heart.png">
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <img src="../static/landing-page-card-images/8.jpg">
-            <p>Lorem ipsum dolor sit amet consectetur</p>
-            <p>Rs. 1500</p>
-            <div class="cardButtons">
-                <button class="btnOne">Buy Now</button>
-                <div class="btnTwo">
-                    <a href="#">
-                        <img class="picSize" src="../static/landing-page-card-images/heart.png">
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <img src="../static/landing-page-card-images/9.png">
-            <p>Lorem ipsum dolor sit amet consectetur</p>
-            <p>Rs. 1500</p>
-            <div class="cardButtons">
-                <button class="btnOne">Buy Now</button>
-                <div class="btnTwo">
-                    <a href="#">
-                        <img class="picSize" src="../static/landing-page-card-images/heart.png">
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <img src="../static/landing-page-card-images/10.jpg">
-            <p>Lorem ipsum dolor sit amet consectetur</p>
-            <p>Rs. 1500</p>
-            <div class="cardButtons">
-                <button class="btnOne">Buy Now</button>
-                <div class="btnTwo">
-                    <a href="#">
-                        <img class="picSize" src="../static/landing-page-card-images/heart.png">
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="card">
-            <img src="../static/landing-page-card-images/11.png">
-            <p>Lorem ipsum dolor sit amet consectetur</p>
-            <p>Rs. 1500</p>
-            <div class="cardButtons">
-                <button class="btnOne">Buy Now</button>
-                <div class="btnTwo">
-                    <a href="#">
-                        <img class="picSize" src="../static/landing-page-card-images/heart (2).jpg">
-                    </a>
-                </div>
-            </div>
-        </div>
+        <script>
+            var productData
+            $(document).ready(function () {
+                $.ajax({
+                    type: "GET",
+                    url: "/getCartProducts",
+                    success: function (response) {
+                        console.log(response)
+                        var productData = JSON.parse(response)
+                        console.log(productData)
+                        for (i in productData) {
+                            console.log(i)
+                            $('.product-board').append("<div class = 'card' id = 'card_" + [i] + "'><img id='imag" + [i] + "' src=''> <p id='description" + [i] + "'></p><p id = 'price" + [i] + "'></p><div class='cardButtons'><button class='btnOne'>Buy Now</button><div class='btnTwo'><a href='#'><img class='picSize' id ='heart" + [i] + "' src='../static/landing-page-card-images/heart (2).jpg'></a></div></div></div>")
+                            //console.log(document.getElementById('imag' + [i]).src) 
+                            document.getElementById('imag' + [i]).src = "../static" + productData[i].img_path
+                            document.getElementById('description' + [i]).innerHTML = productData[i].description
+                            document.getElementById('price' + [i]).innerHTML = productData[i].price
+                            if (productData[i].isFavourite == false) {
+                                document.getElementById('heart' + [i]).src = "../static/landing-page-card-images/heart.png"
+                            }
+                            else {
+                                document.getElementById('heart' + [i]).src = "../static/landing-page-card-images/heart (2).jpg"
+                            }
+                        }
+
+                    }
+                });
+            });
+        </script>
+
     </div>
 </div>
+<!-- </div> -->
+
 
 
 
@@ -342,6 +265,11 @@
         s0.parentNode.insertBefore(s1, s0);
     })();
 </script>
+<!-- <script>
+    $(window).load(function() {
+        $(".preload").removeClass("preload");
+      });
+</script> -->
 <!--End of Tawk.to Script-->
 
 {% endblock %}
